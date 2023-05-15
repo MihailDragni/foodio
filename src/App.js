@@ -17,9 +17,8 @@ const App = () => {
       <div className="content">
         <Header />
         <main>
+          <Home />
           {/* 
-        <Home />
-        
         <About />
         <Menu />
         <Services />

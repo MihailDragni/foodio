@@ -11,33 +11,33 @@ const Header = () => {
       <header className="header" id="header">
         <div className="container">
           <nav className="header__nav">
-            <a href="index.html" className="menu__logo logo">
+            <a href="index.html" className="header__logo logo">
               <img src={logo} alt="Logo" className="logo__img" />
             </a>
 
-            <ul className="header__menu menu" id="menu__menu">
-              <li className="menu__item">
-                <a href="#home" className="menu__link active-link">
+            <ul className="header__menu nav-menu" id="nav-menu__menu">
+              <li className="nav-menu__item">
+                <a href="#home" className="nav-menu__link active-link">
                   Home
                 </a>
               </li>
-              <li className="menu__item">
-                <a href="#about" className="menu__link">
+              <li className="nav-menu__item">
+                <a href="#about" className="nav-menu__link">
                   About
                 </a>
               </li>
-              <li className="menu__item">
-                <a href="#menu" className="menu__link">
+              <li className="nav-menu__item">
+                <a href="#menu" className="nav-menu__link">
                   Menu
                 </a>
               </li>
-              <li className="menu__item">
-                <a href="#services" className="menu__link">
+              <li className="nav-menu__item">
+                <a href="#services" className="nav-menu__link">
                   Services
                 </a>
               </li>
-              <li className="menu__item">
-                <a href="#reservation" className="menu__link">
+              <li className="nav-menu__item">
+                <a href="#reservation" className="nav-menu__link">
                   Reservation
                 </a>
               </li>

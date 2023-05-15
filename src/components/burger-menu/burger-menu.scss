@@ -20,7 +20,10 @@
   @media screen and (min-width: 992px) {
     display: none;
   }
-  & .menu {
+  @media screen and (max-width: 578px) {
+    width: 50vw;
+  }
+  & .nav-menu {
     @media screen and (max-width: 992px) {
       display: flex;
       flex-direction: column;

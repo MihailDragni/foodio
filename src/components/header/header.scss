@@ -6,10 +6,11 @@
   z-index: 10;
   &__nav {
     display: flex;
-    height: calc(var(--header-height) + 1.5rem);
+    // height: calc(var(--header-height) + 1.5rem);
     align-items: center;
     justify-content: space-between;
     column-gap: 20px;
+    padding: 24px 0;
   }
   &__reservation-btn {
     @media screen and (max-width: 992px) {
@@ -22,7 +23,7 @@
   background-color: var(--first-color);
 } */
 
-.menu {
+.nav-menu {
   display: flex;
   column-gap: 3rem;
   @media screen and (max-width: 992px) {
@@ -39,7 +40,7 @@
 }
 
 .active-link,
-.menu__link:hover {
+.nav-menu__link:hover {
   color: var(--second-color);
 }
 
@@ -58,6 +59,10 @@
   z-index: 102;
   @media screen and (min-width: 992px) {
     display: none;
+  }
+  @media screen and (max-width: 1230px) {
+    top: calc(20px + (30 - 20) * ((100vw - 360px) / (1230 - 360)));
+    right: calc(15px + (30 - 15) * ((100vw - 360px) / (1230 - 360)));
   }
 }
 

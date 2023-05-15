@@ -9,13 +9,20 @@
   border: 8px solid var(--second-color);
   display: grid;
   place-items: center;
-  z-index: 100;
+  z-index: 40;
   transition: all 0.4s var(--transition);
+  @media screen and (max-width: 578px) {
+    height: 55px;
+    width: 55px;
+  }
 }
 
 .arrow-up {
   font-size: 1.75rem;
   color: var(--title-color);
+  @media screen and (max-width: 578px) {
+    font-size: 1.3rem;
+  }
 }
 
 .show-scrollup {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { AiOutlineArrowUp } from 'react-icons/ai'
-import './scroll.css'
+import './scroll.scss'
 const Scroll = () => {
   const [scroll, setScroll] = useState(false)
 

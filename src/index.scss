@@ -23,6 +23,29 @@
   --weight-400: 400;
 
   --transition: ease-in-out;
+  @media screen and (max-width: 1230px) {
+    --biggest-font-size: calc(
+      34px + (88 - 34) * ((100vw - 360px) / (1230 - 360))
+    );
+
+    --bigger-font-size: calc(
+      28px + (56 - 28) * ((100vw - 360px) / (1230 - 360))
+    );
+
+    --h1-font-size: calc(24px + (40 - 24) * ((100vw - 360px) / (1230 - 360)));
+
+    --h2-font-size: calc(20px + (28 - 20) * ((100vw - 360px) / (1230 - 360)));
+
+    --h3-font-size: calc(18px + (24 - 18) * ((100vw - 360px) / (1230 - 360)));
+
+    --large-font-size: calc(
+      16px + (20 - 16) * ((100vw - 360px) / (1230 - 360))
+    );
+
+    --large-font-size: calc(
+      14px + (18 - 14) * ((100vw - 360px) / (1230 - 360))
+    );
+  }
 }
 
 * {
@@ -51,6 +74,10 @@ body {
 body {
   background-color: var(--body-color);
   color: var(--text-color);
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 input,
