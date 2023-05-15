@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue&family=Fredoka+One&display=swap');
+
+:root {
+  --header-height: 5.5rem;
+  --first-color: hsl(49, 100%, 53%);
+  --second-color: hsl(349, 89%, 55%);
+  --title-color: hsl(0, 0%, 0%);
+  --text-color: hsl(0, 0%, 33%);
+  --body-color: hsl(0, 0%, 100%);
+  --container-color: hsl(218, 67%, 98%);
+
+  --body-font: 'Epilogue', sans-serif;
+  --second-font: 'Fredoka One', sans-serif;
+  --biggest-font-size: 5.5rem;
+  --bigger-font-size: 3.75rem;
+  --h1-font-size: 2.5rem;
+  --h2-font-size: 1.75rem;
+  --h3-font-size: 1.5rem;
+  --larger-font-size: 1.25rem;
+  --large-font-size: 1.125rem;
+  --normal-font-size: 1rem;
+
+  --weight-400: 400;
+
+  --transition: ease-in-out;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+input,
+button,
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--title-color);
+  font-family: var(--second-font);
+  font-weight: var(--weight-400);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  line-height: 1.875rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1320px;
+	width: 100%;
+  padding-inline: 0.75rem;
+  margin-inline: auto;
+}
+
+/* main {
+  overflow: hidden;
+} */
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section {
+  padding-block: 7.5rem;
+}
+
+.logo {
+	max-width: 183px;
+	flex: 0 0 183px;
+}
+
+.button {
+  display: inline-block;
+  color: var(--body-color);
+  background-color: var(--second-color);
+  padding: 1.25rem 2.5rem;
+  font-family: var(--second-font);
+  position: relative;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  inset-block: -0.5rem;
+  right: -0.5rem;
+  border: 3px solid var(--second-color);
+  width: calc(100% - 1rem);
+  z-index: -1;
+  transition: all 0.3s var(--transition);
+}
+
+.button,
+.button::before {
+  border-radius: 0.75rem;
+}
+
+.button:hover::before {
+  width: 30%;
+}
+
+.title__center {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+  text-align: center;
+  position: relative;
+}
+
+.title__center::after {
+  content: '';
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: -1.25rem;
+  width: 270px;
+  height: 12px;
+  border-radius: 1.5rem;
+  background-color: var(--first-color);
+}
+
+.section__container {
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 3rem;
+}
+
+.section__title {
+  font-size: var(--bigger-font-size);
+}
+
+.section__title,
+.section__description {
+  width: 80%;
+}
+.section__description {
+  margin-bottom: 1.5rem;
+}
+
+.section__subtitle {
+  display: block;
+  color: var(--second-color);
+  font-family: var(--second-font);
+  font-size: var(--large-font-size);
+  font-weight: var(--weight-400);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}

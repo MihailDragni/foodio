@@ -1,0 +1,32 @@
+.menu-two .menu__container {
+  grid-template-columns: repeat(4, 1fr);
+}
+.menu-two .menu__item {
+  padding: 2.5rem;
+  padding-top: 6.5rem;
+  margin-top: 7rem;
+}
+
+.menu-two .menu__img-wrapper,
+.menu-two .menu__img-wrapper::before {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.menu-two .menu__img-wrapper {
+  top: -38%;
+  width: max-content;
+}
+
+.menu-two .menu__img-wrapper::before {
+  width: 154%;
+  height: 100px;
+  top: 5rem;
+}
+
+.menu__grams {
+  font-family: var(--second-font);
+  font-weight: var(--weight-400);
+  display: block;
+  margin-bottom: 0.5rem;
+}
