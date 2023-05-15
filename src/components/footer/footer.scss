@@ -4,9 +4,13 @@
 
 .footer__container {
   grid-template-columns: 8fr 5fr;
-  column-gap: 6rem;
+  column-gap: 7.5%;
+  row-gap: 30px;
   position: relative;
   z-index: 10;
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .footer__description,

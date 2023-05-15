@@ -31,9 +31,14 @@
   margin: 0;
 }
 
+#root {
+  height: 100%;
+}
+
 html,
 body {
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 input,
@@ -77,19 +82,30 @@ p {
 }
 
 img {
+  display: block;
   max-width: 100%;
 }
 
 .container {
   max-width: 1320px;
-	width: 100%;
-  padding-inline: 0.75rem;
+  width: 100%;
+  padding-inline: 0.95rem;
   margin-inline: auto;
 }
 
-/* main {
-  overflow: hidden;
-} */
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
 
 .grid {
   display: grid;
@@ -98,31 +114,48 @@ img {
 
 .section {
   padding-block: 7.5rem;
+  @media screen and (max-width: 1230px) {
+    padding-block: calc(30px + (120 - 30) * ((100vw - 360px) / (1230 - 360)));
+  }
 }
 
 .logo {
-	max-width: 183px;
-	flex: 0 0 183px;
+  display: inline-block;
+  max-width: 183px;
+  width: 100%;
+  flex: 0 0 auto;
+  @media screen and (max-width: 1230px) {
+    max-width: calc(100px + (183 - 100) * ((100vw - 360px) / (1230 - 360)));
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .button {
+  white-space: nowrap;
+  cursor: pointer;
   display: inline-block;
   color: var(--body-color);
   background-color: var(--second-color);
   padding: 1.25rem 2.5rem;
   font-family: var(--second-font);
   position: relative;
-}
-
-.button::before {
-  content: '';
-  position: absolute;
-  inset-block: -0.5rem;
-  right: -0.5rem;
-  border: 3px solid var(--second-color);
-  width: calc(100% - 1rem);
-  z-index: -1;
-  transition: all 0.3s var(--transition);
+  @media screen and (max-width: 1230px) {
+    padding: calc(10px + (20 - 10) * ((100vw - 360px) / (1230 - 360)))
+      calc(20px + (40 - 20) * ((100vw - 360px) / (1230 - 360)));
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    inset-block: -0.5rem;
+    right: -0.5rem;
+    border: 3px solid var(--second-color);
+    width: calc(100% - 1rem);
+    z-index: -1;
+    transition: all 0.3s var(--transition);
+  }
 }
 
 .button,

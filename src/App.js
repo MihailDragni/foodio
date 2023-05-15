@@ -1,5 +1,4 @@
 import React from 'react'
-import './index.css'
 import Home from './components/home/Home'
 import Header from './components/header/Header'
 import About from './components/about/About'
@@ -12,14 +11,15 @@ import Gallery from './components/gallery/Gallery'
 import Scroll from './components/scroll/Scroll'
 import Footer from './components/footer/Footer'
 
-
-
 const App = () => {
   return (
-    <>
-      <Header />
-      <main>
-        {/* <Home />
+    <div className="wrapper">
+      <div className="content">
+        <Header />
+        <main>
+          {/* 
+        <Home />
+        
         <About />
         <Menu />
         <Services />
@@ -27,11 +27,11 @@ const App = () => {
         <MenuTwo />
         <Reservation />
         <Gallery /> */}
-      </main>
-      <Scroll />
+        </main>
+        <Scroll />
+      </div>
       <Footer />
-    </>
-
+    </div>
   )
 }
 

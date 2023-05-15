@@ -3,15 +3,15 @@ import logo from '../../assets/logo.png'
 import mobile from '../../assets/mobile.svg'
 import location from '../../assets/location.svg'
 import evenlope from '../../assets/envelope.svg'
-import './footer.css'
+import './footer.scss'
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__container section grid container">
         <div className="footer__content">
-          <a href="index.html" className="footer__logo">
-            <img src={logo} alt="" className="footer__logo-img" />
+          <a href="index.html" className="footer__logo logo">
+            <img src={logo} alt="" className="logo__img" />
           </a>
           <p className="footer__description">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex velit

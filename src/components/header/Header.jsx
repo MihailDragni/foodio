@@ -1,61 +1,68 @@
-import React from 'react'
-import './header.css'
+import React, { useState } from 'react'
+import './header.scss'
 import logo from '../../assets/logo.png'
 import logoMobile from '../../assets/logo-dark.png'
-import { AiOutlineCloseCircle, AiOutlineMenu } from 'react-icons/ai'
+import BurgerMenu from '../burger-menu/BurgerMenu'
 
 const Header = () => {
+  const [burgerIsActive, setBurgerIsActive] = useState(false)
   return (
-    <header className="header" id="header">
-      <nav className="nav container">
-        <a href="index.html" className="nav__logo logo">
-          <img src={logo} alt="Logo" className="logo-img" />
-        </a>
-        <div className="nav__menu" id="nav__menu">
-          <ul className="nav__list">
-            <li className="nav__item">
-              <a href="#home" className="nav__link active-link">
-                Home
-              </a>
-            </li>
-            <li className="nav__item">
-              <a href="#about" className="nav__link">
-                About
-              </a>
-            </li>
-            <li className="nav__item">
-              <a href="#menu" className="nav__link">
-                Menu
-              </a>
-            </li>
-            <li className="nav__item">
-              <a href="#services" className="nav__link">
-                Services
-              </a>
-            </li>
-            <li className="nav__item">
-              <a href="#reservation" className="nav__link">
-                Reservation
-              </a>
-            </li>
-          </ul>
-        </div>
-        <a href="#reservation" className="button reservation__btn">
-          Reserve A Table
-        </a>
+    <>
+      <header className="header" id="header">
+        <div className="container">
+          <nav className="header__nav">
+            <a href="index.html" className="menu__logo logo">
+              <img src={logo} alt="Logo" className="logo__img" />
+            </a>
 
-				
-        {/* <div className="nav__toggle">
-            <AiOutlineMenu className="menu-line" />
-          </div> */}
-        {/* <div className="nav__close" id="nav__close">
-          <AiOutlineCloseCircle className="close-circle" />
-        </div> */}
-        {/* <a href="index.html" className="logo__mobile">
+            <ul className="header__menu menu" id="menu__menu">
+              <li className="menu__item">
+                <a href="#home" className="menu__link active-link">
+                  Home
+                </a>
+              </li>
+              <li className="menu__item">
+                <a href="#about" className="menu__link">
+                  About
+                </a>
+              </li>
+              <li className="menu__item">
+                <a href="#menu" className="menu__link">
+                  Menu
+                </a>
+              </li>
+              <li className="menu__item">
+                <a href="#services" className="menu__link">
+                  Services
+                </a>
+              </li>
+              <li className="menu__item">
+                <a href="#reservation" className="menu__link">
+                  Reservation
+                </a>
+              </li>
+            </ul>
+
+            <a href="#reservation" className="header__reservation-btn button ">
+              Reserve A Table
+            </a>
+
+            {/* <a href="index.html" className="logo__mobile">
           <img className="logo__mobile-img" src={logoMobile} alt="" />
         </a> */}
-      </nav>
-    </header>
+          </nav>
+        </div>
+      </header>
+      <button
+        className={!burgerIsActive ? 'burger' : 'burger active'}
+        onClick={() => setBurgerIsActive(!burgerIsActive)}
+      >
+        <div className="burger__wrapper">
+          <span></span>
+        </div>
+      </button>
+      <BurgerMenu active={burgerIsActive} />
+    </>
   )
 }
 
